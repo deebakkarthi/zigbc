@@ -5,10 +5,14 @@ CC = gcc-15
 .DEFAULT: all
 
 %: %.o mtrace.o
-	${CC} $< mtrace.o -ldl -o $@
+	#${CC}  $< mtrace.o -ldl -o $@
+	${CC}  $< -o $@
+
+mtrace.o: mtrace.c
+	${CC} -c $< -o $@
 
 %.o: %.c
-	${CC} -c $< -o $@
+	${CC}  -c $< -o $@
 
 all:
 

@@ -66,5 +66,5 @@ static __attribute__((constructor)) void init(void)
 
 static __attribute__((destructor)) void finish(void)
 {
-	printf("MALLOC:%d,FREE:%d\n", malloc_count, free_count);
+	printf("MALLOC:%d ,FREE:%d\n", malloc_count, free_count);
 }
